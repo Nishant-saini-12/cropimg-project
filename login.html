@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-rose-600">
+  <div class="grid lg:grid-cols-2 min-h-screen">
+    <div class="flex items-center justify-center bg-white">
+      <img src="thought.png " alt="Image" class="w-3/4 h-auto rounded-lg shadow-lg" />
+    </div>
+
+    <!-- 📝 Register Form Section -->
+    <div class="lg:flex items-center justify-center bg-white">
+      <form class="lg:w-3/4 max-w-md space-y-4 " onsubmit="login(event)">
+        <div>
+          <h2 class="text-2xl font-bold ">log in</h2>
+          <label class="text-gray-600 font-medium text-lg">Email id</label>
+          <input id="email" name="email" oninput="Validation('email','email-error')"
+            onblur="Validation('email','email-error')" type="email" placeholder="Email"
+            class="w-full p-2 border rounded">
+          <label id="email-error" class="text-rose-400 text-bold hidden">
+            this is my message
+          </label>
+        </div>
+
+        <div>
+          <label class="text-gray-600 font-medium text-lg">password</label>
+          <input oninput="Validation('password','password-error')" id="password"
+            onblur="Validation('password','password-error')" type="password" placeholder="Password" name="password"
+            class="w-full p-2 border rounded" />
+          <label id="password-error" class="text-rose-400 text-bold hidden">
+            this is my message
+          </label>
+          <br>
+          <button class="border rounded w-[100px] bg-blue-300 text-white hover:bg-rose-300 m-5 p-2">log in</button>
+        </div>
+        <label for="" class="flex flex-col text-gray-500">i don't have account ? <a href="signup.html"
+            class=" underline text-bold  text-green-300 hover:text-blue-400 font-medium">sign up</a></label>
+      </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

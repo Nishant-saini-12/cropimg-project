@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+<style type="text/tailwindcss">
+  .bg-test {
+    @apply bg-gray-400 text-white p-4 rounded;
+  }
+</style>
+
+
+</head>
+
+<body>
+   <div class="grid lg:grid-cols-2 min-h-screen">
+  <div class="flex items-center justify-center bg-test">
+    <img src="thought.png" alt="Image" class="w-3/4 h-auto rounded-lg shadow-lg" />
+  </div>
+
+  <!-- 📝 Register Form Section -->
+  <div class="lg:flex items-center justify-center bg-test">
+    <form class="w-3/4 max-w-md space-y-4" onsubmit="createUser(event)">
+      <h2 class="text-2xl font-bold">Register</h2>
+      <div>
+      <input onblur="Validation('fullname','fullname-error')" id="fullname" type="text" placeholder="Name" class="w-full p-2 border rounded m-1" />
+      <small id="fullname-error" class="font-medium text-rose-500 mt-1 hidden">this is my message</small>
+      </div>
+      <div>
+      <input onblur="Validation('email','email-error')" id="email" type="email" placeholder="Email" class="w-full p-2 border rounded" />
+       <small id="email-error" class="font-medium text-rose-500 m-1 hidden">this is my message</small>
+       </div>
+       <div>
+        <div class="w-full p-2 border rounded flex" >
+      <input onblur="Validation('password','password-error')" 
+      id="password"
+       type="password" 
+       placeholder="Password" 
+       class="flex-1"
+       />
+      <button type="button" class="w-10 h-10 bg-gray-300 rounded-full hover:bg-rose-500" onclick="togglepass()">
+      <i class="ri-eye-line" id="password-icon"></i>
+    </button>
+      </div>
+      <small id="password-error" class="font-medium text--500 m-1 hidden">this is my message</small>
+      </div>
+      <button type="submit" class="w-fit bg-blue-500 text-white p-2 rounded hover:bg-black">sign up</button>
+       <label for="" class="flex flex-col text-gray-500">already account exist <a href="login.html" class=" underline text-bold  text-green-300 hover:text-blue-400 font-medium">log up</a></label>
+     
+    </form>
+  </div>
+</div>
+
+       <script src="signup.js"></script>
+       
+
+ 
+</body>
+
+</html>

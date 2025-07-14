@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Logout Button</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.css">
+  <script src="https://unpkg.com/cropperjs@1.5.13/dist/cropper.min.js"></script>
+
+</head>
+
+<body class="grid lg:grid-cols-2 h-screen bg-gray-300 ">
+  <div class="bg-gray-300 rounded-lg shadow-lg flex p-6 space-x-10">
+    <div class="w-64 text-center bg-white rounded-lg shadow p-6">
+      <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white -mt-16 shadow-md bg-orange-400">
+        <img src="thought.png" alt="">
+      </div>
+      <h2 class="mt-4 text-xl font-bold text-gray-800">Er Saurav</h2>
+      <!-- Email -->
+      <p class="text-gray-500 text-sm">ersaurav@gmail.com</p>
+
+      <button
+        class="relative mt-4 border bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-3xl font-semibold w-full">
+        <i class="ri-upload-line"></i>
+        CHOOSE IMAGE
+        <input id="fileinput" onchange="uploadImage()" type="file" accept="image/*"class="opacity-0 w-full h-full absolute top-0 left-0">
+      </button>
+
+      <button id="downloadbutton" onclick="downloadimg()"
+        class="hidden mt-4 border bg-pink-400 hover:bg-pink-300 text-white px-4 py-2 rounded-3xl font-semibold w-full">
+        <i class="ri-download-line"></i>
+        Download
+      </button>
+
+       <button onclick="loadcropper()"
+        class="mt-4 border bg-pink-400 hover:bg-pink-300 text-white px-4 py-2 rounded-3xl font-semibold w-full">
+        <i class="ri-download-line"></i>
+          crop
+      </button>
+
+      <button onclick="logout()"
+        class="mt-4 border bg-yellow-400 hover:bg-yellow-200 text-white px-4 py-2 rounded-3xl font-semibold w-full ">
+        <i class="ri-logout-line"></i>
+        <span>logout</span>
+      </button>
+    </div>
+  </div>
+  <div class="lg:flex items-center justify-center bg-white">
+      <!-- <img id="picture" alt="" class="w-full hidden -->
+        
+       <img id="picture" alt="" class="w-full hidden" > 
+ ">
+    
+   
+  </div>
+
+
+
+  <script src="profile.js"></script>
+</body>
+
+</html>
